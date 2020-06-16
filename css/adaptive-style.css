@@ -1,0 +1,632 @@
+:root{
+    --header-above: #4D4D4D;
+    --header-main: #29A5DC;
+}
+@media (max-width: 1066px){
+    .reviews-row{
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 560px;
+    }
+    .reviews{
+        height: 700px;
+        background: url(../img/bg-reviews.jpg) no-repeat top;
+        background-size: auto 100%;
+        margin-top: 57px;
+    }
+    .slider{
+        top: 80px;
+    }
+}
+@media (max-width: 1000px){
+    .slider__item_title{
+        font-size: 58px;
+    }
+    .slider__items_description{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 900px) {
+    body.lock{
+        overflow: hidden;
+    }
+    .slider{
+        top: 50px;
+    }
+    .content{
+        margin-top: 90px;
+    }
+    .header-burger::after, .header-burger::before{
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+    }
+    .header-above{
+        display: none;
+    }
+    .header{
+        margin-top: 0;
+    }
+    .header-burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 5;
+    }
+    .header-burger span {
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .header-burger::after{
+        top: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .header-burger::before{
+        bottom: 0;
+        transition: all 0.3s ease 0s;
+    } 
+    .header::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--header-main);
+        z-index: 3;
+    } 
+    .header-menu{
+        position: fixed;
+        top: -103%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--header-above);
+        z-index: 2; 
+        padding-top: 70px; 
+        padding-left: 20px; 
+        transition: all 0.5s ease-in 0s;     
+    }  
+    .header-menu.active{
+        padding-top: 65px; 
+        padding-left: 0;
+        top: 0;
+        transition: all 0.5s ease-out 0s;
+    } 
+    .header-logo {
+        flex: 0 0 180px;
+        position: relative;
+        z-index: 3;
+        height: 36px;
+    }
+    .header-main-body{
+        height: 50px;
+    }
+    .header-logo{
+        flex: 0 0 130px;
+    }
+    .btn{
+        display: none;
+    }
+    .header-list{
+        display: block;
+        text-align: center;
+    }
+    .header-list li{
+        margin-bottom: 20px;
+    }
+    .menu::after{
+        display: none;
+    }
+    .header-burger.active::before{
+        transform: rotate(45deg);
+        bottom: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .header-burger.active::after{
+        transform: rotate(-45deg);
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .header-burger.active span{
+        transform: scale(0);
+        transition: all 0.3s ease 0s;
+    }
+
+    /* Адаптация для слайдера */
+    .slider__item_title {
+        font-size: 58px;
+        font-family: "dinpro-bold";
+        margin-bottom: 30px;
+      }
+      .slider__items_description{
+        font-size: 24px;
+        font-family: "dinpro-medium";
+    }
+}
+@media (max-width: 768px){
+    .slider__item_title{
+        font-size: 50px;
+    }
+    .slider__items_description{
+        font-size: 22px;
+    }
+}
+/* Для смартфонов */
+@media (max-width: 450px) {
+    body.lock{
+        overflow: hidden;
+    }
+    .header-burger::after, .header-burger::before{
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+    }
+    .header-above{
+        display: none;
+    }
+    .header{
+        margin-top: 0;
+    }
+    .header-burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 5;
+    }
+    .header-burger span {
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .header-burger::after{
+        top: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .header-burger::before{
+        bottom: 0;
+        transition: all 0.3s ease 0s;
+    } 
+    .header::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--header-main);
+        z-index: 3;
+    } 
+    .header-menu{
+        position: fixed;
+        transform: translateY(-100%);
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--header-above);
+        z-index: 2; 
+        padding-top: 70px; 
+        padding-left: 20px; 
+        transition: all 0.5s ease-in 0s;     
+    }  
+    .header-menu.active{
+        transform: translateY(0);
+        transition: all 0.5s ease-out 0s;
+    } 
+    .header-logo {
+        flex: 0 0 180px;
+        position: relative;
+        z-index: 3;
+        height: 36px;
+    }
+    .header-main-body{
+        height: 50px;
+        transition: all 300ms;
+    }
+    .header-main-body.move{
+        height: 40px;
+        transition: all 300ms;
+    }
+    .header-logo{
+        flex: 0 0 120px;
+    }
+    .btn{
+        display: none;
+    }
+    .header-list{
+        display: block;
+    }
+    .header-list li{
+        margin-bottom: 20px;
+    }
+    .menu::after{
+        display: none;
+    }
+    .header-burger.active::before{
+        transform: rotate(45deg);
+        bottom: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .header-burger.active::after{
+        transform: rotate(-45deg);
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .header-burger.active span{
+        transform: scale(0);
+        transition: all 0.3s ease 0s;
+    }
+
+    /* Весь контент */
+    .content{
+        margin-top: 36px;
+    }
+
+    /* Адаптация для слайдера */
+    .slider{
+        top: 50px;
+    }
+    .slider__item_title {
+        font-size: 28px;
+        font-family: "dinpro-bold";
+        margin-bottom: 30px;
+    }
+      .slider__items_description{
+        font-size: 12px;
+        font-family: "dinpro-medium";
+    }
+    .slider__control {
+        
+        transform: scale(1);
+    }
+    .slider__control_prev {
+        left: 30px;
+      }
+    
+      .slider__control_next {
+        right: 30px;
+      }
+    .slider__indicators li {
+        width: 20px;
+        height: 5px;
+    }
+    .content{
+        display: block;
+        margin-top: 80px;
+      }
+    /* Для услуг */
+    .services{
+        margin-top: 40px;
+    }
+    .title{
+        font-size: 30px;
+        font-family: "dinpro-bold";
+        color: var(--header-above);
+        margin-bottom: 15px;
+    }
+    .subtext-services{
+        font-family: "dinpro-regular";
+        font-size: 18px;
+        color: var(--header-above);
+        margin: 20px 0;
+        text-align: center;
+    }
+    .line{
+        width: 260px;
+        height: 3px;
+        background-color: var(--header-main);
+    }
+    .car-img-wrap {
+        position: relative;
+        top: 23px;
+    }
+    .car-img-wrap{
+        /* border: 5px solid red; */
+        top: 180px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 280px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+      .car-img{
+        /* border: 5px solid red; */
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+      .car-img img{
+        transform: scale(1.4);
+    }
+    .icon-oil{
+        top: 15%;
+        left: 10%;
+    }
+    .icon-power{
+        top: 17%;
+        left: 30%;
+    }
+    .icon-engine{
+        top: 34%;
+        left: 20%;
+    }
+    .icon-transmision{
+        top: 31%;
+        left: 50%;
+    }
+    .icon-wheels{
+        top: 40%;
+        left: 75%;
+    }
+    .info-container{
+        top: 350px;   
+    }
+    .btn-all-services{
+        display: flex;
+        width: 262px;
+        height: 40px;
+        background-color: var(--header-main);
+        position: absolute;
+        top: 560px;
+        font-family: "dinpro-medium";
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        transition: all 400ms;
+    }
+    /* Для отзывов */
+    .reviews-content{
+        width: 100%;
+        height: auto;
+    }
+    .review-block{
+        width: 100%;
+        height: auto;
+        margin-bottom: 120px;
+    }
+    .reviews {
+        height: auto;
+        background: url(../img/bg-reviews.jpg) repeat top;
+        background-size: auto 50%;
+        margin-top: 57px;
+    }
+    .title{
+        text-align: center;
+    }
+    .reviews-row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin-top: 40px;
+    }
+    .review-wrap{
+        width: auto;
+        height: auto;
+    }
+    .review-wrap::after{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 35px; 
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 12px solid var(--header-above);
+        transition: all 500ms;
+    }
+    .avatar{
+        height: 45px;
+        width: 45px;
+        top: 200px;
+        border-radius: 50px;
+        box-shadow: 1px 3px 7px 0.2px;
+        left: 0;
+    }
+    .review-author{
+        font-family: "dinpro-bold";
+        font-size: 20px;
+        top: 210px;
+        color: var(--header-above); 
+        transition: all 500ms;
+    }
+    .author-info {
+        position: absolute;
+        top: 114%;
+        left: 0;
+        display: flex;
+        align-items: center;
+    }
+    /* Для преимуществ */
+    
+    .advantages-row {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .advantage-text{
+        text-align: center;
+    }
+    .advantages-block{
+        width: 100%;
+    }
+    .advantage-title {
+        font-size: 21px;
+    }
+    .icon-advantage-1::before{
+        top: -12px;
+    }
+    .icon-advantage-2::before{
+        top: -15px;
+    }
+    .icon-advantage-3::before{
+        top: -12px;
+    }
+    .icon-advantage-4::before{
+        top: -14px;
+    }  
+    .advantage-wrap{
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;    
+    }
+
+    /* Для цен */
+
+    .prices-row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .price-wrap{
+        margin-bottom: 45px;
+    }
+    .btn-prices{
+        margin-top: 10px;
+    }
+
+    /* Фетер */
+
+    .footer{
+        margin-top: 50px;
+        width: 100%;
+        height: 38%;
+        padding: 20px 0;
+    }
+    .footer-row{
+        flex-direction: column;
+    }
+    .logo-footer{
+        flex: 0 0 40px;
+    }
+    @media (max-width: 375px){
+        .slider__item_title{
+            font-size: 26px;
+        }
+        .slider__items_description{
+            font-size: 12px;
+        }
+        .title{
+            font-size: 28px;
+            font-family: "dinpro-bold";
+            color: var(--header-above);
+            margin-bottom: 15px;
+        }
+        .subtext-services{
+            font-family: "dinpro-regular";
+            font-size: 16px;
+            color: var(--header-above);
+            margin: 20px 0;
+            text-align: center;
+        }
+        .advantage-text{
+            text-align: center;
+            font-size: 14px;
+        }
+        .info-die{
+            transform: scale(0.8);
+        }
+    }
+    @media (max-width: 320px){
+        .slider__item_title{
+            font-size: 23px;
+        }
+        .slider__items_description{
+            font-size: 10px;
+        }
+        .title{
+            font-size: 27px;
+            font-family: "dinpro-bold";
+            color: var(--header-above);
+            margin-bottom: 15px;
+        }
+        .subtext-services{
+            font-family: "dinpro-regular";
+            font-size: 15px;
+            color: var(--header-above);
+            margin: 20px 0;
+            text-align: center;
+        }
+        .icon-oil{
+            top: 12%;
+            left: 10%;
+            width: 40px;
+            height: 40px;
+            background-size: 17px auto;
+        }
+        .icon-power{
+            top: 13%;
+            left: 30%;
+            width: 40px;
+            height: 40px;
+            background-size: 24px auto;
+        }
+        .icon-engine{
+            top: 27%;
+            left: 20%;
+            width: 40px;
+            height: 40px;
+            background-size: 28px auto;
+        }
+        .icon-transmision{
+            top: 29%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background-size: 28px auto;
+        }
+        .icon-wheels{
+            top: 33%;
+            left: 75%;
+            width: 40px;
+            height: 40px;
+            background-size: 28px auto;
+        }
+        .advantage-title {
+            font-size: 20px;
+        }
+        .info-die{
+            transform: scale(0.7);
+        }
+        .price-wrap{
+            transform: scale(0.8);
+            margin-bottom: -35px;
+        }
+        .prices-row{
+            margin-top: 10px;
+        }
+        .btn-prices-wrap{
+            margin-top: 40px;
+        }
+    }
+
+}
