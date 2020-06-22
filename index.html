@@ -6,18 +6,13 @@
   <title></title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/adaptive-style.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  
-  <script src="js/main.js"></script>
-  
   <meta name="viewport" content="width=device-width">
 </head>
 
 <body>
 
   <div class="wrapper">
-    <header class="header"> 
+    <header class="header lock-padding"> 
         <div class="container">
           <div class="header-main-body">
             <a href="#" class="header-logo">
@@ -45,7 +40,7 @@
                 </li>
               </ul>
             </nav>
-            <a href="#" class="btn">
+            <a href="#popup" class="btn popup-link">
               <span class="btn-text">Записаться на техосмотр</span>
             </a>
           </div>
@@ -298,7 +293,7 @@
             <a href="#"><div href="#" class="social-icon-5 social-icon"></div></a>      
           </div>
           <span class="footer-text">
-            2020 © AutoStar
+            2020 © AutoStart
           </span>
       </div>
     </div>
@@ -306,7 +301,52 @@
 </footer>
 
 
+
+<div class="popup" id="popup">
+  <div class="popup__body">
+    <div class="popup__content">
+      <a href="#" class="close-popup">
+        <div class="icon__close"></div>
+      </a>
+      <div class="popup__title">Оставить заявку на техосмотр</div>
+      <div class="line__form__title"></div>
+      <form action="#" method="POST">
+        <!-- Скрытие поля -->
+        <input type="hidden" name="project_name" value="Автосервис AutoStar">
+        <input type="hidden" name="admin_email" value="german.bakunov@gmail.com">
+        <input type="hidden" name="form_subject" value="Заявка на техосмотр">
+        <!-- Рабочая форма -->
+        <div class="contact__title">Ваши контактные данные</div>
+        <div class="input__row">
+          <input type="text" placeholder="Ваше имя*" required>
+          <input type="text" placeholder="Ваш телефон*" required>
+        </div>
+        <input type="text" placeholder="Ваш e-mail*">
+        <div class="contact__title">Детали заказа</div>
+        <div class="input__row">
+          <input class="run__car" type="text" placeholder="Пробег">
+          <input type="text" class="input__model__car" placeholder="Модель автомобиля">
+        </div>
+        <input type="text" placeholder="Период эксплуатации">
+        <div class="input__row">
+          <input class="" type="date" placeholder="Дата">
+          <input class="input__time" type="time" placeholder="Время">
+        </div>
+        <button class="btn-send" type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="js/main.js"></script>
 <script src="js/slider-script.js"></script>
+<script src="js/popups.js"></script>
+<script src="js/mail-form.js"></script>
 
 </body>
 

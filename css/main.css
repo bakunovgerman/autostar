@@ -30,6 +30,9 @@ body, html{
     height: 100%;
     /* width: 100%; */
 }
+body.lock{
+  overflow: hidden;
+}
 .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -201,7 +204,7 @@ body, html{
   color: white;
   background-color: var(--header-above);
   transition: all 500ms;
-  box-shadow: 0 0 10px 2px rgb(180, 180, 180), 0 0 6px 0 rgb(180, 180, 180), 0 0 10px 0 rgb(180, 180, 180);
+  box-shadow: none;
 }
 .btn-text{
     font-size: 12px;
@@ -466,8 +469,7 @@ body, html{
     background-color: var(--header-above);
   }
   .icon-services{
-    cursor: pointer;
-    
+    cursor: pointer; 
   }
   
   .icon-power{
@@ -1067,6 +1069,143 @@ body, html{
   .footer-text{
     font-family: "dinpro-medium";
     color: white;
+  }
+
+  .popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.527);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50; 
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
+  }
+  .popup.open{
+    opacity: 1;
+    visibility: visible;
+  }
+  .popup.open .popup__content{
+    transform: perspective(600px) translate(0px 0%) rotate(0deg);
+    opacity: 1;
+    transition: all 0.8s ease 0s;
+  }
+  .popup__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .popup__content{
+    background-color: #fff;
+    max-width: 700px;
+    position: relative;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;  
+    border: 3px solid var(--header-main);
+    opacity: 0;
+    transform: perspective(600px) translate(0px 100%) rotate(45deg);
+    transition: all 0.8s ease 0s;
+  }
+  .icon__close{
+    background: url(../icons/close.svg) no-repeat center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all 400ms;
+  }
+  .icon__close:hover{
+    transform: scale(0.8);
+    transition: all 400ms;
+  }
+  .popup__title{
+    font-size: 35px;
+    font-family: "dinpro-bold";
+    color: var(--header-above);
+  }
+  .line__form__title{
+    margin-top: 10px;
+    margin-bottom: 30px;  
+    height: 2px;
+    background-color: var(--header-main);
+    width: 80%;
+  }
+  .contact__title{
+    font-family: "dinpro-medium";
+    font-size: 20px;
+    color: var(--header-above);
+    margin-bottom: 20px;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  input{
+    display: block;
+    margin-bottom: 20px;
+    height: 20px;
+    width: 47%;
+    height: 12%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "dinpro-regular";
+    border: none;
+    box-shadow: inset 0 0 0 1px var(--header-above);
+    transition: all 500ms;
+    color: var(--header-above);
+    outline: none;
+    box-sizing: border-box;
+  }
+  input:hover{
+    box-shadow: inset 0 0 0 2px var(--header-main);
+  }
+  input:focus{
+    box-shadow: inset 0 0 0 2px var(--header-main);
+  }
+  .input__row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .btn-send {
+    background-color: var(--header-main);
+    font-family: "dinpro-medium";
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    transition: all 500ms;
+    outline: none;
+  }
+  .btn-send:hover{
+    background-color: var(--header-above);
+    color: #fff;
+    transition: all 500ms;
+  }
+  ::-webkit-calendar-picker-indicator {
+    color: transparent;
+    opacity: 1;
+    background: url(https://image.flaticon.com/icons/svg/42/42455.svg) no-repeat center;
+    background-size: contain;
+  }
+  .input__time{
+    background: url(https://image.flaticon.com/icons/svg/1124/1124602.svg) no-repeat;
+    background-position-x: 90%;
+    padding-right: 50px;
+    background-position-y: center;
+    background-size: 19px auto;
   }
 
 
