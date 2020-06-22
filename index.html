@@ -310,7 +310,7 @@
       </a>
       <div class="popup__title">Оставить заявку на техосмотр</div>
       <div class="line__form__title"></div>
-      <form action="#" method="POST">
+      <form>
         <!-- Скрытие поля -->
         <input type="hidden" name="project_name" value="Автосервис AutoStar">
         <input type="hidden" name="admin_email" value="german.bakunov@gmail.com">
@@ -318,21 +318,21 @@
         <!-- Рабочая форма -->
         <div class="contact__title">Ваши контактные данные</div>
         <div class="input__row">
-          <input type="text" placeholder="Ваше имя*" required>
-          <input type="text" placeholder="Ваш телефон*" required>
+          <input type="text" placeholder="Ваше имя*" required name="Имя">
+          <input type="text" placeholder="Ваш телефон*" required name="Телефон">
         </div>
-        <input type="text" placeholder="Ваш e-mail*">
+        <input type="text" placeholder="Ваш e-mail*" name="Почта">
         <div class="contact__title">Детали заказа</div>
         <div class="input__row">
-          <input class="run__car" type="text" placeholder="Пробег">
-          <input type="text" class="input__model__car" placeholder="Модель автомобиля">
+          <input class="run__car" type="text" placeholder="Пробег" name="Пробег">
+          <input type="text" class="input__model__car" placeholder="Модель автомобиля" name="Модель автомобиля">
         </div>
-        <input type="text" placeholder="Период эксплуатации">
+        <input type="text" placeholder="Период эксплуатации" name="Период эксплуатации">
         <div class="input__row">
-          <input class="" type="date" placeholder="Дата">
-          <input class="input__time" type="time" placeholder="Время">
+          <input class="" type="date" placeholder="Дата" name="Дата">
+          <input class="input__time" type="time" placeholder="Время" name="Время">
         </div>
-        <button class="btn-send" type="submit">Отправить</button>
+        <button class="btn-send">Отправить</button>
       </form>
     </div>
   </div>
